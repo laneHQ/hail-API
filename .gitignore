@@ -75,3 +75,4 @@ fabric.properties
 !/project/build.properties
 !/build.sbt
 !/project/plugins.sbt
+!/project/
