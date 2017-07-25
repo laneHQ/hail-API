@@ -72,3 +72,5 @@ crashlytics-build.properties
 fabric.properties
 /target/
 /project/
+!/project/build.properties
+!/build.sbt
