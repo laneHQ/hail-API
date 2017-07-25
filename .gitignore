@@ -74,3 +74,4 @@ fabric.properties
 /project/
 !/project/build.properties
 !/build.sbt
+!/project/plugins.sbt
