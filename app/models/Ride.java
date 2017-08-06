@@ -1,6 +1,8 @@
 package models;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -78,6 +80,7 @@ public class Ride {
 
     @Column(name = "ride_time")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm a")
     public Date getRide_time() {
         return ride_time;
     }

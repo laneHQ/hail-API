@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
   guice,
   javaJpa,
   "org.hibernate" % "hibernate-core" % "5.2.5.Final",
-  "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final",
+  "org.hibernate" % "hibernate-entitymanager" % "5.2.5.Final",
   "mysql" % "mysql-connector-java" % "5.1.12"
 )
 

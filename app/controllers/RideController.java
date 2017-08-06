@@ -1,5 +1,6 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import play.db.jpa.JPAApi;
 import play.libs.Json;
 import play.mvc.Controller;
@@ -22,5 +23,13 @@ public class RideController extends Controller {
     public Result showRides() {
         Query q = jpaApi.em().createQuery("select r from Ride r");
         return ok(Json.toJson(q.getResultList()));
+    }
+
+    @play.db.jpa.Transactional
+    public Result createRide() {
+        JsonNode json = request().body().asJson();
+        Ride ride = Json.fromJson(json, Ride.class);
+        jpaApi.em().persist(ride);
+        return ok(Json.toJson(ride));
     }
 }
